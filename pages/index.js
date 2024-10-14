@@ -1,57 +1,51 @@
+import React from 'react';
 import Navbar from '../components/Navbar';
 import RegularButton from '../components/RegularButton';
 import StrokeButton from '../components/StrokeButton';
-import newHomeImage from '../public/images/newHomeImage.svg';
-import Image from 'next/image';
 import Link from 'next/link';
+import CryptoListing from '../components/Chart';
 import HomePageExtras from '../components/HomePageExtras';
+import Faq from '../components/FrequentlyAnskedQuestions';
+import Footer from '../components/Footer';
 
 export default function Home() {
-	return (
-		<div className='bg-bgBlue min-h-screen'>
-			<Navbar />
-			<main className='flex flex-col-reverse md:flex-row justify-between items-center text-white overflow-y-hidden px-6 md:px-12'>
-				<div className='w-full md:w-4/6'>
-					<h1 className='px-5 md:px-0 text-3xl md:text-7xl bg-clip-text font-display bg-rainbow text-transparent my-0 md:my-10'>
-						Discover collect, & sell Extraordinary NFTs
-					</h1>
-					<p className='px-5 md:px-0 my-6 md:my-10 w-full md:w-4/5'>
-						The leading NFT Marketplace on EthereumHome to the next generation
-						of digital creators.Discover the best NFT collections.
-					</p>
-					<div className='px-5 md:px-0 w-4/5 md:w-3/12 flex justify-between'>
-						<Link href='/marketplace'>
-							<RegularButton text={'Explore'} />
-						</Link>
-						<StrokeButton>
-							<Link href='/create'>Create</Link>
-						</StrokeButton>
-					</div>
-
-					<div className='w-full mt-8 flex justify-evenly md:justify-between text-white md:w-1/2'>
-						<div className='flex flex-col items-center'>
-							<p className='font-display text-lg'>432K</p>
-							<p className='text-gray-300'>+Collections</p>
-						</div>
-
-						<div className='flex flex-col items-center'>
-							<p className='font-display text-lg'>200K</p>
-							<p className='text-gray-300'>+Artists</p>
-						</div>
-
-						<div className='flex flex-col items-center'>
-							<p className='font-display text-lg'>10K</p>
-							<p className='text-gray-300'>+Community</p>
-						</div>
-					</div>
-				</div>
-				<Image
-					src={newHomeImage}
-					alt='Home page image'
-					className='w-full md:w-2/5'
-				/>
-			</main>
-			<HomePageExtras />
-		</div>
-	);
+  return (
+    <div className='bg-black min-h-screen text-white'>
+      <Navbar />
+      <main className='flex flex-col md:flex-row justify-between items-start px-6 md:px-12 mt-[80px] mb-[50px]'>
+        <div className='w-full md:w-1/2 mb-8 md:mb-0 ml-16'>
+          <h1 className='text-6xl md:text-8xl font-bold text-lightBlue mb-4'>
+            Ystoxx
+          </h1>
+          <h2 className='text-2xl md:text-3xl font-semibold mb-8 text-gray-300'>
+            A new chapter in Crypto Finance
+          </h2>
+          <div className='mb-6 flex flex-col md:flex-row'>
+            <input
+              type="text"
+              placeholder="Email/Phone number"
+              className='bg-dark-gray text-white p-3 rounded-md w-full md:w-64 mb-4 md:mb-0 md:mr-4'
+            />
+        	<RegularButton 
+				text='Sign up'
+			/>
+          </div>
+          <div className='flex space-x-4'>
+            <Link href='/marketplace'>
+              <RegularButton text={'Explore'} />
+            </Link>
+            <StrokeButton>
+              <Link href='/create'>Create</Link>
+            </StrokeButton>
+          </div>
+        </div>
+        <div className='w-full md:w-1/2'>
+          <CryptoListing />
+        </div>
+      </main>
+      <HomePageExtras />
+	  <Faq/>
+	  <Footer/>
+    </div>
+  );
 }

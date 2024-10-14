@@ -15,15 +15,39 @@ export default function Profile() {
 	}));
 
 	const getMyNfts = async () => {
-		try {
-			const signer = await getProviderOrSigner(web3modalRef, true);
-			const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, signer);
-			const _myNfts = await nftContract.fetchMyNFTs();
-			setMyNFTs(_myNfts);
-			console.log(_myNfts);
-		} catch (error) {
-			console.log('Error fetching your NFTs : ', error);
-		}
+		// try {
+		// 	const signer = await getProviderOrSigner(web3modalRef, true);
+		// 	const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, signer);
+		// 	const _myNfts = await nftContract.fetchMyNFTs();
+		// 	setMyNFTs(_myNfts);
+		// 	console.log(_myNfts);
+		// } catch (error) {
+		// 	console.log('Error fetching your NFTs : ', error);
+		// }
+		setMyNFTs([
+			{
+				"name": "BB ki Vines",
+				"description": "By Bhuvan Bam",
+				"website":"http://axieinfinity.io",
+				"image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+				"price":"0.03ETH",
+				"currentlySelling":"True",
+				"address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+				"quantity":"15",
+			},
+			{
+				"name": "BB ki Vines",
+				"description": "By Bhuvan Bam",
+				"website":"http://axieinfinity.io",
+				"image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+				"price":"0.03ETH",
+				"currentlySelling":"True",
+				"address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+				"quantity":"35",
+
+			}]
+			)
+
 	};
 	const getMyListedNfts = async () => {
 		try {
@@ -63,7 +87,7 @@ export default function Profile() {
 		<div className='bg-bgBlue min-h-screen px-6 md:px-12'>
 			<Navbar />
 			<main className='flex flex-col items-center'>
-				<h1 className='mb-8 text-center text-transparent text-2xl md:text-4xl bg-rainbow bg-clip-text font-display'>
+				<h1 className='mb-8 text-center  text-2xl md:text-4xl  text-lightBlue font-display'>
 					Profile
 				</h1>
 				<div className='flex justify-center text-white w-4/5'>

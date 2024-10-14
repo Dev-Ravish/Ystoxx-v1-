@@ -8,9 +8,10 @@ module.exports = {
 		extend: {
 			colors: {
 				// prettier-ignore
-				'bgBlue': '#151843',
+				'bgBlue': '#000000',
 				// prettier-ignore
-				'lightBlue': '#2F80ED',
+				'lightBlue': '#cc0000',
+				'dark-gray': '#0a0e19',
 			},
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],

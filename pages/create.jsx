@@ -104,7 +104,7 @@ export default function Create() {
 	return (
 		<div className='bg-bgBlue min-h-screen px-1 md:px-12'>
 			<Navbar />
-			<h1 className='mb-12 text-center text-transparent text-2xl md:text-3xl bg-rainbow bg-clip-text font-display'>
+			<h1 className='mb-12 text-center  text-2xl md:text-3xl text-lightBlue bg-clip-text font-display'>
 				Create Your NFT
 			</h1>
 			<form className='px-12 flex flex-col' onSubmit={mintNft}>
@@ -113,15 +113,15 @@ export default function Create() {
 						<label
 							htmlFor='album_name'
 							className='block mb-2 text-sm font-medium text-white dark:text-white'>
-							Album name
+							Channel Name
 						</label>
 						<input
 							type='text'
 							value={albumName}
 							onChange={(e) => setAlbumName(e.target.value)}
 							id='album_name'
-							className='outline-none bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-							placeholder='Dhundhala'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
+							placeholder='Logan Paul'
 							required
 						/>
 					</div>
@@ -136,8 +136,8 @@ export default function Create() {
 							value={creatorName}
 							onChange={(e) => setCreatorName(e.target.value)}
 							id='creator-name'
-							className='outline-none bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-							placeholder='Yashraj'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
+							placeholder='Logan Paul'
 							required
 						/>
 					</div>
@@ -145,22 +145,22 @@ export default function Create() {
 						<label
 							htmlFor='mood'
 							className='block mb-2 text-sm font-medium text-white dark:text-white'>
-							Type of song
+							Type of Content
 						</label>
 						<input
 							value={typeofSong}
 							onChange={(e) => setTypeofSong(e.target.value)}
 							type='text'
 							id='mood'
-							className='outline-none bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-							placeholder='Pop'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
+							placeholder='Self Help'
 							required
 						/>
 					</div>
 					<div>
 						<label
 							htmlFor='language'
-							className='block mb-2 text-sm font-medium text-white dark:text-white'>
+							className='block mb-2 text-sm font-medium text-white '>
 							Language(if any)
 						</label>
 						<input
@@ -168,8 +168,8 @@ export default function Create() {
 							onChange={(e) => setLanguage(e.target.value)}
 							type='text'
 							id='language'
-							className='outline-none bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-							placeholder='Hindi'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
+							placeholder='English'
 							required
 						/>
 					</div>
@@ -184,7 +184,7 @@ export default function Create() {
 							onChange={(e) => setAmount(e.target.value)}
 							type='number'
 							id='amount'
-							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
 							placeholder='100'
 							required
 						/>
@@ -200,7 +200,7 @@ export default function Create() {
 							onChange={(e) => setPrice(e.target.value)}
 							type='number'
 							id='price'
-							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
 							placeholder='0.01 MATIC'
 							required
 							min={0.000001}
@@ -212,12 +212,12 @@ export default function Create() {
 						<label
 							className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'
 							htmlFor='file_input1'>
-							Upload thumbnail For album
+							Upload thumbnail For your Channel
 						</label>
 						<input
 							onChange={(e) => uploadFileToIpfs(e)}
 							disabled={loader || imageUrl.length !== 0}
-							className='block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 p-2.5'
+							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
 							id='file_input1'
 							accept='image/*'
 							type='file'

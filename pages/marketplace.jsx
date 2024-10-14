@@ -110,6 +110,96 @@ const sampleData = [
         "currentlySelling":"True",
         "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
     },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
+    {
+        "name": "BB ki Vines",
+        "description": "By Bhuvan Bam",
+        "website":"http://axieinfinity.io",
+        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
+        "price":"0.03ETH",
+        "currentlySelling":"True",
+        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+    },
 ];
 const [data, updateData] = useState(sampleData);
 
@@ -117,9 +207,9 @@ return (
     <div className="bg-bgBlue min-h-screen px-8 md:px-12">
         <Navbar></Navbar>
         <div className="flex flex-col place-items-center mt-20">
-            <div className="md:text-xl font-bold text-white">
-                Top NFTs
-            </div>
+			<h1 className='mb-4 text-center text-2xl md:text-4xl  text-lightBlue font-display'>
+                Channels &nbsp;Listed
+            </h1>
             <div className="flex mt-5 justify-between flex-wrap max-w-screen-xl text-center">
                 {data.map((value, index) => {
                     return <NFTTile data={value} key={index}></NFTTile>;

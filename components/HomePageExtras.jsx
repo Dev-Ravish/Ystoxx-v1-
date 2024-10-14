@@ -6,9 +6,9 @@ import Image from 'next/image';
 
 export default function () {
 	return (
-		<div className='bg-bgBlue min-h-screen text-white flex flex-col items-center justify-evenly'>
-			<h1 className='text-transparent text-2xl md:text-4xl bg-rainbow bg-clip-text font-display my-6 md:my-0'>
-				Create and sell your NFTs
+		<div className='bg-black min-h-screen text-white flex flex-col items-center justify-evenly'>
+			<h1 className='text-lightBlue text-2xl md:text-4xl  font-display my-6 md:my-0'>
+				Create and sell your NFTs	
 			</h1>
 			<div className='flex flex-col md:flex-row items-center justify-evenly px-5'>
 				<div className='flex flex-col items-center justify-evenly'>

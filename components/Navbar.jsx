@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../public/images/MNFTlogo.png';
+import logo from '../public/images/logo_sm.png';
 import RegularButton from './RegularButton';
 import Web3Modal from 'web3modal';
 import useweb3store from '../store/web3store';
@@ -50,7 +50,7 @@ export default function Navbar() {
 					<div className='flex items-center justify-between w-full'>
 						<div className='flex-shrink-0'>
 							<Link href='/'>
-								<Image height={100} width={80} src={logo} alt='Logo' />
+								<Image height={100} width={80} src={logo} alt='gggggg' />
 							</Link>
 						</div>
 						<div className='hidden md:block'>
@@ -58,7 +58,7 @@ export default function Navbar() {
 								<Link
 									href='/marketplace'
 									className=' hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'>
-									Marketplace
+									Market
 								</Link>
 
 								<Link
