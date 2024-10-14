@@ -3,15 +3,32 @@ import Bookmark from '../public/images/Bookmark.png';
 import Upload from '../public/images/Paper-Upload.png';
 import Wallet from '../public/images/Wallet.png';
 import Image from 'next/image';
-
+import { siteContents } from '../constants/sitecontent';
 export default function () {
 	return (
 		<div className='bg-black min-h-screen text-white flex flex-col items-center justify-evenly'>
 			<h1 className='text-lightBlue text-2xl md:text-4xl  font-display my-6 md:my-0'>
-				Create and sell your NFTs	
+				{/* Create and sell your NFTs	 */}
+				{siteContents.section.youtuberGains.title}
 			</h1>
-			<div className='flex flex-col md:flex-row items-center justify-evenly px-5'>
-				<div className='flex flex-col items-center justify-evenly'>
+			<div className='w-full flex flex-col md:flex-row gap-4 justify-evenly px-5'>
+				{siteContents.section.youtuberGains.gains.map(item=>
+					(<div className='flex flex-col items-center'>
+					<Image
+						src={Wallet}
+						width={40}
+						height={40}
+						alt='Wallet Icon'
+						className='w-8 h-8'
+					/>
+					<h2 className='text-xl md:text-2xl font-semibold my-3 md:my-5'>
+						{item.title}
+					</h2>
+					<p className='text-sm text-center w-3/4'>
+						{item.description}
+					</p>
+				</div>))}
+				{/* <div className='flex flex-col items-center justify-evenly'>
 					<Image
 						src={Wallet}
 						width={40}
@@ -63,7 +80,7 @@ export default function () {
 						listings. You choose how you want to sell your NFTs, and we help you
 						sell them
 					</p>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

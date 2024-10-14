@@ -7,6 +7,8 @@ import CryptoListing from '../components/Chart';
 import HomePageExtras from '../components/HomePageExtras';
 import Faq from '../components/FrequentlyAnskedQuestions';
 import Footer from '../components/Footer';
+import MeetTheTeam from '../components/TeamMembers';
+import AboutUs from '../components/AboutUs';
 
 export default function Home() {
   return (
@@ -45,6 +47,8 @@ export default function Home() {
       </main>
       <HomePageExtras />
 	  <Faq/>
+	  <MeetTheTeam/>
+	  <AboutUs/>
 	  <Footer/>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -8,7 +8,8 @@ const Footer = () => {
       <div className="mx-auto flex max-w-screen-xl flex-wrap justify-around gap-4 px-4">
         <div className="mb-4 min-w-[200px] flex-1">
           <h3 className="mb-4 text-xl">About Us</h3>
-          <p>We are a company dedicated to creating amazing web experiences.</p>
+          <p>We are a company dedicated to</p>
+          <p>creating amazing web experiences.</p>
         </div>
         <div className="mb-4 min-w-[200px] flex-1">
           <h3 className="mb-4 text-xl">Quick Links</h3>
@@ -54,6 +55,11 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin"></i>
             </a>
+          </div>
+          <br />
+          <div>
+            <p> ch21b081@smail.iitm.ac.in</p>
+            <p> +91 91429 40445</p>
           </div>
         </div>
       </div>

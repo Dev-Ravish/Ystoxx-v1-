@@ -14,12 +14,10 @@ export default function Card2( nft ) {
 	}, []);
 	return (
 		<div className='text-white p-3 rounded-lg flex flex-col justify-evenly items-center border border-white w-66 min-h-80'>
-			<Image
-				src={nftData.nft.image ? nftData.nft.image : ''}
-				className='rounded-lg'
-				width={300}
-				height={300}
-				alt='NFT Image'
+			<img 
+				src={nftData.nft.image} 
+				alt={nftData.nft.name}
+				className="w-full rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 h-3/5"
 			/>
 			<div className='flex flex-col items-center w-full'>
 				<p className='font-bold text-xl self-center my-4'>{ nftData.nft.name}</p>

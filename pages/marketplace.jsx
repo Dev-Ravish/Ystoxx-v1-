@@ -80,127 +80,10 @@ import NFTTile from "./NFTTile";
 // import axios from "axios";
 import { useState } from "react";
 // import { GetIpfsUrlFromPinata } from "../utils";
+import {sampleData} from "../constants/youtubedata";
 
 export default function Marketplace() {
-const sampleData = [
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-    {
-        "name": "BB ki Vines",
-        "description": "By Bhuvan Bam",
-        "website":"http://axieinfinity.io",
-        "image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-        "price":"0.03ETH",
-        "currentlySelling":"True",
-        "address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-    },
-];
+
 const [data, updateData] = useState(sampleData);
 
 return (
@@ -212,7 +95,7 @@ return (
             </h1>
             <div className="flex mt-5 justify-between flex-wrap max-w-screen-xl text-center">
                 {data.map((value, index) => {
-                    return <NFTTile data={value} key={index}></NFTTile>;
+                    return <NFTTile url={value.image} data={value} key={index}></NFTTile>;
                 })}
             </div>
         </div>            

@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
+import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
+import Navbar from '../../components/Navbar';
+import { sampleData } from '../../constants/youtubedata';
 
-export default function NFTPage() {
-    const [data, updateData] = useState({
+const NFT = () => {
+    const router = useRouter()
+    const query=router.query.nft
+    console.log(query)
+     const [data, updateData] = useState({
         "name": "Mr. Beast",
         "description": "Mr. Beast",
         "website": "http://axieinfinity.io",
@@ -16,9 +21,20 @@ export default function NFTPage() {
     const [showModal, setShowModal] = useState(false);
     const [quantity, setQuantity] = useState(1);
     const [totalNFTsLeft, setTotalNFTsLeft] = useState(100); // Assuming 100 NFTs are left
-
+    useEffect(() => {
+        if (query) {
+            // Search the sampleData array for an item that matches the 'name' field with the query
+            const matchedData = sampleData.find(item => item.name.toLowerCase() === query.toLowerCase());
+            if (matchedData) {
+                updateData(matchedData);  // Update state with matched data
+            } else {
+                updateMessage("No matching data found.");
+            }
+        }
+    }, [query]);
     useEffect(() => {
         const container = document.querySelector('.nft-container');
+        
         if (container) {
             container.classList.add('fade-in');
         }
@@ -26,22 +42,22 @@ export default function NFTPage() {
 
     const buyNFT = async () => {
         try {
-            if (typeof window.ethereum === 'undefined') {
-                throw new Error("No crypto wallet found. Please install MetaMask.");
-            }
+            // if (typeof window.ethereum === 'undefined') {
+            //     throw new Error("No crypto wallet found. Please install MetaMask.");
+            // }
 
-            await window.ethereum.request({ method: 'eth_requestAccounts' });
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            const signer = provider.getSigner();
+            // await window.ethereum.request({ method: 'eth_requestAccounts' });
+            // const provider = new ethers.providers.Web3Provider(window.ethereum);
+            // const signer = provider.getSigner();
 
-            const totalPrice = (parseFloat(data.price) * quantity).toFixed(3);
-            const transaction = {
-                to: data.address,
-                value: ethers.utils.parseEther(totalPrice.toString())
-            };
+            // const totalPrice = (parseFloat(data.price) * quantity).toFixed(3);
+            // const transaction = {
+            //     to: data.address,
+            //     value: ethers.utils.parseEther(totalPrice.toString())
+            // };
 
-            const tx = await signer.sendTransaction(transaction);
-            await tx.wait();
+            // const tx = await signer.sendTransaction(transaction);
+            // await tx.wait();
 
             updateMessage(`Successfully bought ${quantity} NFT(s)!`);
             setTotalNFTsLeft(prev => prev - quantity);
@@ -159,3 +175,5 @@ export default function NFTPage() {
         </div>
     );
 }
+
+export default NFT

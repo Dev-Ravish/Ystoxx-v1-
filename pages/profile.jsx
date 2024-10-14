@@ -26,26 +26,16 @@ export default function Profile() {
 		// }
 		setMyNFTs([
 			{
-				"name": "BB ki Vines",
-				"description": "By Bhuvan Bam",
-				"website":"http://axieinfinity.io",
-				"image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-				"price":"0.03ETH",
-				"currentlySelling":"True",
-				"address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-				"quantity":"15",
-			},
-			{
-				"name": "BB ki Vines",
-				"description": "By Bhuvan Bam",
-				"website":"http://axieinfinity.io",
-				"image":"https://gateway.pinata.cloud/ipfs/QmRpYftdLp6aNA69Zx18XyVPF85zKAgm5u6DRw6fpGMFBi",
-				"price":"0.03ETH",
-				"currentlySelling":"True",
-				"address":"0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
-				"quantity":"35",
+        "name": "Mr. Beast",
+        "description": "Mr. Beast",
+        "website": "http://axieinfinity.io",
+        "image": "https://yt3.ggpht.com/fxGKYucJAVme-Yz4fsdCroCFCrANWqw0ql4GYuvx8Uq4l_euNJHgE-w9MTkLQA805vWCi-kE0g=s176-c-k-c0x00ffffff-no-rj-mo",
+        "price": "0.03",
+        "currentlySelling": "True",
+        "address": "0xe81Bf5A757CB4f7F82a2F23b1e59bE45c33c5b13",
+		"quantity":"15",
 
-			}]
+    },]
 			)
 
 	};
