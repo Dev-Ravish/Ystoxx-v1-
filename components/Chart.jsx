@@ -75,7 +75,7 @@ const CryptoListing = ({ fastUpdateInterval = 500, slowUpdateInterval = 1000, sl
               </div>
             </div>
             <div className="text-right flex ">
-              <div className="text-white">{crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ETH</div>
+              <div className="text-white">${crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
               <div className={`text-sm ${crypto.change >= 0 ? 'text-green-500' : 'text-red-500'} my-auto pl-20`}>
                 {crypto.change >= 0 ? '+' : ''}{crypto.change.toFixed(2)}%
               </div>

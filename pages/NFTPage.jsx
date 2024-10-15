@@ -71,13 +71,12 @@ export default function NFTPage() {
                     <h2 className="text-3xl font-bold">{data.name}</h2>
                     <p className="text-xl">{data.description}</p>
                     <div className="flex justify-between items-center">
-                        <span className="text-2xl font-semibold">{data.price} ETH</span>
                         <span className="text-sm opacity-75">
                             Owner: {`${data.address.slice(0, 6)}...${data.address.slice(-4)}`}
                         </span>
                     </div>
                     <div className="text-center">
-                        <p className="text-lg mb-2">Total NFTs left: {totalNFTsLeft}</p>
+                        <p className="text-lg mb-2">Current NFT Price: {data.price} ETH</p>
                     </div>
                     {currAddress !== data.address && (
                         <button 

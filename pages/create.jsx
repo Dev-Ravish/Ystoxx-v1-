@@ -121,7 +121,7 @@ export default function Create() {
 							onChange={(e) => setAlbumName(e.target.value)}
 							id='album_name'
 							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
-							placeholder='Logan Paul'
+							placeholder='Name of your channel'
 							required
 						/>
 					</div>
@@ -137,7 +137,7 @@ export default function Create() {
 							onChange={(e) => setCreatorName(e.target.value)}
 							id='creator-name'
 							className='outline-none bg-dark-gray border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '
-							placeholder='Logan Paul'
+							placeholder='Your Name'
 							required
 						/>
 					</div>
