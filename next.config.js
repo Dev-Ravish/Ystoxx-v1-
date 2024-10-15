@@ -8,16 +8,6 @@ const nextConfig = {
 				hostname: 'gateway.pinata.cloud',
 				pathname: '/ipfs/**',
 			},
-            {
-                protocol: 'https',
-                hostname: 'yt3.ggpht.com',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'yt3.googleusercontent.com',
-                pathname: '/**',
-            },
 		],
 	},
 };
