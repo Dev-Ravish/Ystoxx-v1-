@@ -53,7 +53,7 @@ export default function Navbar() {
 								<Image height={100} width={80} src={logo} alt='gggggg' />
 							</Link>
 						</div>
-						<div className='hidden md:block'>
+						{/* <div className='hidden md:block'>
 							<div className='ml-10 flex items-baseline space-x-4'>
 								<Link
 									href='/marketplace'
@@ -80,7 +80,7 @@ export default function Navbar() {
 									/>
 								)}
 							</div>
-						</div>
+						</div> */}
 					</div>
 					<div className='mr-2 flex md:hidden'>
 						<button
