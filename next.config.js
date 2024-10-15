@@ -9,6 +9,19 @@ const nextConfig = {
 				port: '',
 				pathname: '/ipfs/**',
 			},
+			,
+            {
+                protocol: 'https',
+                hostname: 'yt3.ggpht.com',
+                port: '',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'yt3.googleusercontent.com',
+                port: '',
+                pathname: '/**',
+            },
 		],
 	},
 };
